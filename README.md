@@ -24,8 +24,9 @@ Proyek ini merupakan aplikasi Web GIS (Geographic Information System) sederhana 
 1. **Clone repositori**
 
    ```bash
-   git clone https://github.com/pangeran-droid/WebGIS-Sekolah-CI4.git
-   cd WebGIS-Sekolah-CI4
+   git clone https://github.com/achmadkhusna/LocaSchool.git
+   cd WebGIS_School_Mapping
+
    ```
 
 2. **Salin file `.env.example`**
@@ -38,21 +39,29 @@ Proyek ini merupakan aplikasi Web GIS (Geographic Information System) sederhana 
 
    ```
    database.default.hostname = localhost
-   database.default.database = nama_database
+   database.default.database = your_database_name
    database.default.username = root
    database.default.password = your_password
    database.default.DBDriver = MySQLi
+
+   ```
+4. **Import file db_gis_sekolah.sql**
+
+   ```
+   Import file db_gis_sekolah.sql dari folder database/ ke mysql komputermu, kemudian sesuaikan nama database-mu dengan .env dan file database.php yang ada di folder app/config/database.php.
+
    ```
 
-4. **Jalankan server lokal**
+5. **Jalankan server lokal**
 
    ```bash
    php spark serve
    ```
 
-5. **Akses di browser**
+6. **Akses di browser**
    ```
    http://localhost:8080
+   
    ```
 
 ## 🔑 Login Admin

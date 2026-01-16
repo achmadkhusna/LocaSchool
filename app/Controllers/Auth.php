@@ -46,7 +46,9 @@ class Auth extends BaseController
             $CekLogin = $this->ModelAuth->Login($email, $password);
             if ($CekLogin) {
                 session()->set('nama_user', $CekLogin['nama_user']);
+                session()->set('email', $CekLogin['email']);
                 session()->set('foto', $CekLogin['foto']);
+                session()->set('id_user', $CekLogin['id_user']);
                 session()->set('login', 1);
                 return redirect()->to('Admin');
             } else {
@@ -62,7 +64,9 @@ class Auth extends BaseController
     public function LogOut()
     {
         session()->remove('nama_user');
+        session()->remove('email');
         session()->remove('foto');
+        session()->remove('id_user');
         session()->remove('login');
         session()->setFlashdata('logout', 'Anda berhasil Log Out');
         return redirect()->to('Auth/Login');
