@@ -43,17 +43,25 @@ Proyek ini merupakan aplikasi Web GIS (Geographic Information System) sederhana 
    database.default.username = root
    database.default.password = your_password
    database.default.DBDriver = MySQLi
+
+   ```
+4. **Import file db_gis_sekolah.sql**
+
+   ```
+   Import file db_gis_sekolah.sql dari folder database/ ke mysql komputermu, kemudian sesuaikan nama database-mu dengan .env dan file database.php yang ada di folder app/config/database.php.
+
    ```
 
-4. **Jalankan server lokal**
+5. **Jalankan server lokal**
 
    ```bash
    php spark serve
    ```
 
-5. **Akses di browser**
+6. **Akses di browser**
    ```
    http://localhost:8080
+   
    ```
 
 ## 🔑 Login Admin
